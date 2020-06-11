@@ -1,0 +1,1057 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,700i');
+
+/** Generic CSS **/
+html, body {
+    font-size: 1em;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-family: 'Roboto Slab', 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+.container {
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.clear:before, .clear:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px 35px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background: #28a594;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:hover, .button:focus, .button:active {
+    background: #208779;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 70px;
+}
+
+/** Header CSS **/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 10;
+    background: #28a594;
+}
+
+header .clear {
+    padding: 0 20px;
+}
+
+header .logo {
+    float: left;
+    display: block;
+    margin-top: 13px;
+}
+
+header .logo img {
+    display: block;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul, header nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+header nav a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+header nav a:hover, header nav a:focus, header nav a:active {
+    background: #239181;
+    text-decoration: none;
+}
+
+header nav li:last-child a {
+    display: block;
+    height: auto;
+    padding: 12px 15px;
+    margin-left: 15px;
+    margin-top: 12px;
+    border-radius: 5px;
+    background: #45b8a8;
+}
+
+header nav li:last-child a:hover, header nav li:last-child a:focus, header nav li:last-child a:active {
+    background: #4ec9b8;
+}
+
+header .mobile-button {
+    display: none;
+    width: 57px;
+    height: 41px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: url('../images/hamburger.png') no-repeat center;
+}
+
+/** Header responsive CSS **/
+@media screen and (max-width: 670px) {
+    header .mobile-button {
+        display: block;
+        position: absolute;
+        right: 14px;
+        top: 14px;
+    }
+
+    header nav {
+        float: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 0;
+        overflow: hidden;
+        background: #28a594;
+        transition: height 0.2s;
+    }
+
+    header nav li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #249686;
+    }
+
+    header nav li:first-child {
+        border-top: 1px solid #249686;
+    }
+
+    header nav a {
+        display: block;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    header nav li:last-child a {
+        display: block;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 0;
+        padding: 15px 20px;
+        background: #28a594;
+    }
+
+}
+
+/** Footer CSS **/
+footer .legal {
+    padding: 30px 20px;
+    font-size: 15px;
+    background: #292929;
+}
+
+footer .legal .left {
+    float: left;
+    width: 48%;
+    color: #ffffff;
+}
+
+footer .legal .right {
+    float: right;
+    width: 48%;
+    color: #b7b7b7;
+    text-align: right;
+}
+
+footer .social {
+    padding: 30px 20px;
+    font-size: 15px;
+    background: #181818;
+}
+
+footer .social span, footer .social a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1em;
+}
+
+footer .social span {
+    color: #b7b7b7;
+    margin-right: 20px;
+}
+
+footer .social a {
+    margin: 0 6px;
+}
+
+/** Footer Responsive CSS **/
+@media screen and (max-width: 360px) {
+    footer .social span {
+        display: none;
+    }
+
+    footer .social {
+        text-align: center;
+    }
+}
+
+/** Feature CSS **/
+.feature {
+    position: relative;
+    display: table;
+    width: 100%;
+}
+
+.feature .image, .feature .content {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.feature .image {
+    width: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature .position {
+    max-width: 900px;
+    min-height:425px;
+    padding: 60px 50px 20px;
+    box-sizing: border-box;
+}
+
+.feature h2 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.feature p {
+    margin: 30px 0 60px;
+    color: #858484;
+}
+
+.feature hr {
+    margin: 60px 0 0 0;
+    width: 50px;
+    height: 2px;
+    border: none;
+}
+
+/** Responsive feature CSS **/
+@media screen and (max-width: 800px) {
+    .feature {
+        display: block;
+    }
+
+    .feature .image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        z-index: 0;
+    }
+
+    .feature .content {
+        position: relative;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .feature .position {
+        padding: 35px 25px;
+        min-height: 0;
+    }
+}
+
+/** Bottom CTA CSS **/
+.bottom-cta {
+    padding: 50px 20px;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.bottom-cta h2 {
+    color: #28a594;
+    margin: 0;
+    font-size: 36px;
+}
+
+.bottom-cta p {
+    color: #858484;
+    margin: 35px 0;
+}
+
+/** Informative banner **/
+.informative-banner {
+    color: #fff;
+    padding: 30px 30px 40px;
+}
+
+.informative-banner img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+.informative-banner h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 28px;
+}
+
+.informative-banner h1 span {
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.informative-banner h1:after {
+    display: block;
+    width: 150px;
+    height: 3px;
+    margin-top: 20px;
+    background: #fde6ac;
+    content: '';
+}
+
+.informative-banner h1 + p {
+    margin-left: 100px;
+    font-weight: 100;
+    font-size: 16px;
+    color: #f1dce4;
+}
+
+.informative-banner span a:before {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 6px;
+    width: 7px;
+    height: 12px;
+    margin-right: 8px;
+    background: url('../images/back-arrow-icon.png') no-repeat center;
+    background-size: cover;
+    content: '';
+}
+
+/** Informative banner responsive CSS **/
+@media screen and (max-width: 1185px) {
+    .informative-banner img {
+        display: none;
+    }
+
+    .informative-banner h1 + p {
+        margin-left: 0;
+    }
+}
+
+/** Sidebar with content layout CSS **/
+.content-container {
+    display: table;
+    width: 100%;
+}
+
+.content-container .content {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.content-container .sidebar {
+    display: table-cell;
+    vertical-align: top;
+    width: 350px;
+    -webkit-box-shadow: -8px 0px 35px -14px rgba(0,0,0,0.64);
+    -moz-box-shadow: -8px 0px 35px -14px rgba(0,0,0,0.64);
+    box-shadow: -8px 0px 35px -14px rgba(0,0,0,0.64);
+}
+
+@media screen and (max-width: 1000px) {
+    .content-container .content {
+        display: block;
+        padding: 25px;
+    }
+
+    .content-container .sidebar {
+        display: block;
+        width: auto;
+        padding: 25px;
+    }
+}
+
+/** Sidebar News letter CSS **/
+.sidebar .news-letter {
+    padding: 25px 30px 40px 30px;
+    background: #6f4d7a;
+}
+
+.sidebar .news-letter h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.sidebar .news-letter h2:after {
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin-top: 20px;
+    background: #fde6ac;
+    content: '';
+}
+
+.sidebar .news-letter p {
+    margin-top: 20px;
+    color: #d9c5df;
+}
+
+.sidebar .news-letter input[type=email] {
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.sidebar .news-letter .button {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/** Sidebar links CSS **/
+.sidebar .links {
+    padding: 30px 20px;
+}
+
+.sidebar .links h2 {
+    margin: 0;
+    color: #2a608e;
+    font-size: 20px;
+}
+
+.sidebar .links h2:after {
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin-top: 15px;
+    background: #ffc5ac;
+    content: '';
+}
+
+.sidebar .links ul {
+    margin: 10px 0 30px 20px;
+    padding: 0;
+}
+
+.sidebar .links li {
+    padding: 5px 0;
+    color: #ffc5ac;
+}
+
+.sidebar .links li a {
+    font-size: 16px;
+    color: #28a594;
+    text-decoration: underline;
+}
+
+/** Home CSS */
+.home .banner {
+    height: 580px;
+    padding: 40px 25px 0 25px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    background: url('../images/home-banner-background.jpg');
+    box-sizing: border-box;
+}
+
+.home .banner h1 {
+    margin: 0;
+}
+
+.home .banner .button {
+    display: block;
+    padding: 12px 0;
+    width: 338px;
+    margin: 40px auto 30px;
+    background: #9556a8;
+}
+
+.home .banner .button:hover, .home .banner .button:focus, .home .banner .button:active {
+    background: #af65c4;
+}
+
+.home .banner img, .home .secondary-banner img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.home .website-box h2 {
+    color: #95baa8;
+}
+
+.home .website-box em {
+    color: #9a62ab;
+}
+
+.home .complete-partner h2 {
+    color: #17afbc;
+}
+
+.home .complete-partner em {
+    color: #fa9d44;
+}
+
+.home .complete-partner hr {
+    background: #fa9d44;
+}
+
+/** Home responsive css **/
+@media screen and (max-width: 970px) {
+    .home .banner {
+        height: auto;
+    }
+
+    .home .banner img {
+        margin-bottom: -50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .home .banner img {
+        min-width: calc(100% + 150px);
+        margin-bottom: -50px;
+        margin-left: -75px;
+        margin-right: -75px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home .banner .button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .home .secondary-banner {
+        overflow: hidden;
+        width: 100%;
+        height: 250px;
+    }
+
+    .home .secondary-banner img {
+        display: block;
+        position: relative;
+        left: 50%;
+        margin-left: -580px;
+        height: 250px;
+        width: auto;
+        max-width: none;
+    }
+}
+
+
+/** What we do CSS **/
+.what-we-do .informative-banner {
+    background: url('../images/what-we-do-banner.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.what-we-do .feature {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.what-we-do .design h2 {
+    color: #49919d;
+}
+
+.what-we-do .design em {
+    color: #28a594;
+}
+
+.what-we-do .design hr {
+    background: #d1be57;
+}
+
+.what-we-do .development h2 {
+    color: #287db4;
+}
+
+.what-we-do .development em {
+    color: #28a594;
+}
+
+.what-we-do .development hr {
+    background: #ff7b4a;
+}
+
+.what-we-do .marketing h2 {
+    color: #cf4f44;
+}
+
+.what-we-do .marketing em {
+    color: #28a594;
+}
+
+.what-we-do .marketing hr {
+    background: #47b29e;
+}
+
+.what-we-do .website-box h2 {
+    color: #95baa8;
+}
+
+.what-we-do .website-box em {
+    color: #9a62ab;
+}
+
+.what-we-do .website-box hr {
+    background: #fccf5a;
+}
+
+/** Our work CSS **/
+.our-work .informative-banner {
+    background: url('../images/our-work-banner.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.our-work .projects {
+    display: block;
+    list-style: none;
+    max-width: 1880px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.our-work .projects li {
+    position: relative;
+    float: left;
+    width: calc(25% - 50px);
+    height: 390px;
+    border: 25px solid #fff;
+    margin: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 0px 26px -1px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 26px -1px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 26px -1px rgba(0,0,0,0.45);
+    box-sizing: border-box;
+}
+
+.our-work .projects li img {
+    display: block;
+    z-index: 1;
+}
+
+.our-work .projects li div {
+    position: absolute;
+    top: -25px;
+    bottom: -25px;
+    left: -25px;
+    right: -25px;
+    padding: 20px 25px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.2s;
+}
+
+.our-work .projects li:hover div {
+    opacity: 1;
+}
+
+.our-work .projects div h2 {
+    margin: 0;
+    font-size: 29px;
+}
+.our-work .projects div h2 span {
+    display: block;
+    font-size: 18px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: #fde6ac;
+}
+
+.our-work .projects div hr {
+    margin: 20px 0;
+    background: #24786d;
+    height: 2px;
+    border: none;
+}
+
+.our-work .projects div a {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-size: 18px;
+    color: #fde6ac;
+}
+
+.our-work .projects div a:after {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    width: 13px;
+    height: 22px;
+    background: url('../images/project-arrow-icon.png') no-repeat center;
+    content: '';
+}
+
+/** Our work responsive CSS **/
+@media screen and (max-width: 1500px) {
+    .our-work .projects div h2 {
+        font-size: 27px;
+    }
+
+    .our-work .projects li {
+        width: calc(33% - 50px);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .our-work .projects div h2 {
+        font-size: 22px;
+    }
+
+    .our-work .projects li {
+        margin: 15px;
+        width: calc(50% - 30px);
+        border: 10px solid #fff;
+    }
+
+    .our-work .projects li div {
+        top: -10px;
+        bottom: -10px;
+        left: -10px;
+        right: -10px;
+        padding: 10px 15px;
+    }
+
+    .our-work .projects div hr {
+        margin: 5px 0;
+    }
+
+    .our-work .projects div p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .our-work .projects div h2 {
+        font-size: 22px;
+    }
+
+    .our-work .projects li {
+        width: calc(100% - 30px);
+    }
+}
+
+/** Individual project CSS **/
+.individual-project .informative-banner {
+    padding-bottom: 250px;
+    background: url('../images/individual-project-banner.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.individual-project .project-image {
+    display: block;
+    margin: -220px auto 0;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+/** Blog CSS **/
+.blog .informative-banner {
+    background: url('../images/blog-banner.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.blog .posts {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.blog article {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.blog .post-heading {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.blog .post-heading h1 {
+    font-size: 34px;
+    color: #28a594;
+    margin: 0 0 10px 0;
+}
+
+.blog .post-heading p {
+    color: #858484;
+    font-size: 14px;
+    margin: 0;
+}
+
+.blog .post-heading p a {
+    color: #28a594;
+    text-decoration: underline;
+}
+
+.blog .post-content {
+    color: #858484;
+}
+
+.blog .post-content img {
+    float: right;
+    padding-left: 35px;
+    padding-bottom: 35px;
+}
+
+/** Responsive blog CSS **/
+@media screen and (max-width: 1000px) {
+    .blog .post-content img {
+        float: none;
+        display: block;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .blog .posts {
+        padding: 25px;
+    }
+}
+
+/** About Us CSS **/
+.about-us .informative-banner {
+    background: url('../images/about-us-banner.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.about-us .content h1 {
+    margin-top: 40px;
+    color: #49919d;
+}
+
+.about-us .content p {
+    color: #858484;
+}
+
+.about-us .content hr {
+    margin: 60px 0 0 0;
+    width: 50px;
+    height: 2px;
+    border: none;
+    background: #d1be57;
+}
+
+/** Contact us CSS **/
+.contact-us .informative-banner {
+    background: url('../images/contact-us-banner.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.contact-us .content h1 {
+    margin-top: 40px;
+    color: #49919d;
+}
+
+.contact-us .content p {
+    color: #858484;
+}
+
+.contact-us .sidebar ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.contact-us .sidebar li:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+}
+
+.contact-us .sidebar li.email:before {
+    width: 25px;
+    height: 15px;
+    margin-right: 10px;
+    background: url('../images/email-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar li.phone:before {
+    width: 25px;
+    height: 15px;
+    margin-right: 10px;
+    background: url('../images/phone-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar li.address:before {
+    width: 25px;
+    height: 15px;
+    margin-right: 10px;
+    background: url('../images/building-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar li.twitter:before {
+    width: 25px;
+    height: 16px;
+    margin-right: 10px;
+    background: url('../images/pink-twitter-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar li.facebook:before {
+    width: 25px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('../images/pink-facebook-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar li.google:before {
+    width: 25px;
+    height: 14px;
+    margin-right: 10px;
+    background: url('../images/pink-google-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar li.instagram:before {
+    width: 25px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('../images/pink-instagram-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar li.pinterest:before {
+    width: 25px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('../images/pink-pinterest-icon.png') no-repeat center;
+}
+
+.contact-us .sidebar .address {
+    padding-left: 32px;
+}
+
+.contact-us .sidebar li.address:before {
+    margin-left: -32px;
+    margin-right: 3px;
+}
+
+.contact-us .sidebar .address span {
+    color: #858484;
+}
+
+#contact-area {
+    margin-top: 25px;
+}
+
+#contact-area .textfield {
+    padding: 5px;
+    width:100%;
+    max-width: 500px;
+    height: 40px;
+    font-family: Helvetica, sans-serif;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #ccc;
+}
+
+#contact-area textarea {
+    padding: 5px;
+    width:100%;
+    min-height: 200px;
+    max-width: 900px;
+    font-family: Helvetica, sans-serif;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #ccc;
+}
+
+#contact-area textarea {
+    height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+    -webkit-box-shadow: -8px 0px 35px -14px rgba(0,0,0,0.64);
+    -moz-box-shadow: -8px 0px 35px -14px rgba(0,0,0,0.64);
+    box-shadow: -8px 0px 35px -14px rgba(0,0,0,0.64);
+}
+
+#contact-area input.submit-button {
+    font-size 1em;
+    min-width: 100px;
+    border: 0px;
+}
+
+label {
+    margin-right: 15px;
+    padding-top: 5px;
+    font-size: 1em;
+}
+
+#mc_embed_signup {
+    background: #6f4d7a;
+    clear: left;
+    font: 14px Roboto, Helvetica, Arial, sans-serif;
+    color: #fff;
+  }
